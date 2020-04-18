@@ -13,6 +13,6 @@ module.exports = function(passport){
       console.log(accessToken);
       console.log(profile);
     })
-  )
-}
+  );
+};
 
