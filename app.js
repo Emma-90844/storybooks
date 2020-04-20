@@ -8,6 +8,16 @@ require('./config/passport')(passport);
 //Load Routes
 const auth = require('./routes/auth');
 
+//Load keys
+const keys = require('./config/keys');
+ 
+//DB CONNECTION
+//Map global promise
+mongoose.Promise = global.Promise;
+ //mongoose Connect
+ mongoose.connect(keys.mongoURI, { useUnifiedTopology: true })
+ .then(()=> console.log('Mongo db connected'))
+ .catch(err => console.log(err));
 
 const app = express();
 
