@@ -12,7 +12,7 @@ const auth = require('./routes/auth');
 const app = express();
 
 app.get('/', (req, res) => {
-    res.send('Sending ...');
+    res.send('Amost working fully.............................');
 });
 
 
