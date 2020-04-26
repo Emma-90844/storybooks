@@ -1,6 +1,6 @@
 module.exports = {
     mongoURI:'mongodb+srv://emma:ehelisemmy@cluster0-qp0y1.mongodb.net/test?retryWrites=true&w=majority',
-    googleClientID:'124985823550-figtffhbe1bkh32vn2pi5ursfjruhm14.apps.googleusercontent.com',
-    googleClientSecret:'v-Ne06cU4L-jY2jZx403Yb8E',
+    googleClientID:'313636884176-5q1ce7ni559eeqolv50vnlbg5j32dsh3.apps.googleusercontent.com',
+    googleClientSecret:'iSb8cLF-qpQbBAGcUhDkfgMO',
 }; 
 
