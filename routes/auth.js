@@ -24,10 +24,8 @@ router.get('/verify', (req, res) => {
 //Logout route
 router.get('/logout', (req, res) => {
   res.logout();
-  res.redrect('/');
+  res.redirect('/');
 });
-
-
 
 
 module.exports = router;

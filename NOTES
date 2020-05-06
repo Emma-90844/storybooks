@@ -1,0 +1,18 @@
+express session goes right above the session middle ware coz 
+passport needs it to run
+
+2-- Remember to put all the 
+            //Adding Session
+            app.use(cookieParser());
+
+            app.use(session({
+            secret: 'secret',
+            resave: false,
+            saveUninitialized: false
+            }));
+
+            //Passport Middleware
+            app.use(passport.initialize());
+            app.use(passport.session()); 
+                                                above
+                                                        app.use('/auth', auth);
