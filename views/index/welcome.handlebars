@@ -1,10 +1,10 @@
-<!DOCTYPE html>
+<!DOCTYPE htnml>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="/assets/css/materialize/css/materialize.min.css">
 
 </head>
 
@@ -14,7 +14,14 @@
     <p>Post stories from the best moments and bad moments of
         your life and chosse weather they stay private or read
         by the whole world.</p>
-        <a href="/auth/google" class="btn red darken-1"> <i class="fa ga-google left"></i>Login With Google</a>
+
+        {{!-- Google Button --}}
+        {{#if user}}
+        {{else}}
+            <a href="/auth/google" class="btn red darken-1"><i class="fa fa-google left"></i>Login With Google</a>
+        {{/if}}
+
+
 </body>
 
 </html>
