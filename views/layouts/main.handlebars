@@ -4,20 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <title>Story Books</title>
-    
+    {{!--Assets link --}}
     <link type="text/css" href="/assets/css/materialize/css/materialize.css"  rel="stylesheet">
     <link type="text/css" href="/assets/css/bootstrap-4.4.1/dist/css/bootstrap.css"  rel="stylesheet">
     <link  type="text/css" href="/assets/css/font-awesome-4.7.0/css/font-awesome.css"  rel="stylesheet" >
+    <link rel="stylesheet" href="/public/css/style.css">
     
 </head>
 <body>
   {{> _header}}
+  {{!-- Add story button --}}
+  {{#if user}}
+    {{> _add-btn}}
+  {{/if}}
+  {{!-- Main section --}}
   <main>
     <div class="container">
       {{{body}}}
-    </div>
+    </div>  
   </main>
-
+  {{!-- Footer --}}
+{{> _footer}}
   <script src="/assets/js/jquery/jquery-3.3.1.slim.min.js"></script>
   <script src="/assets/js/materialise/js/materialize.js"></script>
    <script src="/assets/js/bootstrapjs/js/bootstrap.min.js"></script>

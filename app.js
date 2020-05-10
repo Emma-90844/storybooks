@@ -42,7 +42,7 @@ app.engine('handlebars', exphbs({
 }));
 app.set('view engine', 'handlebars');
 
-//static folser configuration
+//Set static folder configuration
 app.use(express.static(path.join(__dirname, 'public')));
 
 //Adding Session
