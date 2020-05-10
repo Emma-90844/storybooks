@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <title>Story Books</title>
-    <link rel="stylesheet" href="/assets/css/bootstrap/bootstrap.min.css">
-    <link rel="stylesheet" href="/assets/css/fontawesome/fontawesome.min.css">
-    <link rel="stylesheet" href="/assets/css/materialize/materialize.css">
+    
+    <link type="text/css" href="/assets/css/materialize/css/materialize.css"  rel="stylesheet">
+    <link type="text/css" href="/assets/css/bootstrap-4.4.1/dist/css/bootstrap.css"  rel="stylesheet">
+    <link  type="text/css" href="/assets/css/font-awesome-4.7.0/css/font-awesome.css"  rel="stylesheet" >
+    
 </head>
 <body>
   {{> _header}}
@@ -17,8 +19,14 @@
   </main>
 
   <script src="/assets/js/jquery/jquery-3.3.1.slim.min.js"></script>
-  <script src="/assets/js/materialise/materialize.min.js"></script>
-  <script src="/assets/js/bootstrapjs/bootstrap.min.js"></script>
-  
+  <script src="/assets/js/materialise/js/materialize.js"></script>
+   <script src="/assets/js/bootstrapjs/js/bootstrap.min.js"></script>
+   
+   {{!-- Innitialising Button collapse in _header.hbs --}}
+  <script>
+    $(document).ready(() => {
+      $('.button-collapse').sideNav();
+    });
+  </script>
 </body>
 </html>
