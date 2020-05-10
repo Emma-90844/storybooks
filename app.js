@@ -5,16 +5,18 @@ const mongoose = require('mongoose');
 const cookieParser = require('cookie-parser');
 const passport = require('passport');
 const session = require('express-session');
+const bodyParser = require('body-parser');
 
 //Load User Model
 require('./models/User');
 
 // Passport Config
-require('./config/passport')(passport);
+require('./config/passport')(passport); 
 
 // Load Routes
 const index = require('./routes/index');
 const auth = require('./routes/auth');
+const stories = require('./routes/stories');
 
 // Load Keys
 const keys = require('./config/keys');
@@ -29,7 +31,10 @@ mongoose.Promise = global.Promise;
 
 const app = express();
 
-
+// Body Parser middleware
+app.use(express.static(__dirname));
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 
 //Handlebars Middleware
 app.engine('handlebars', exphbs({
@@ -37,9 +42,8 @@ app.engine('handlebars', exphbs({
 }));
 app.set('view engine', 'handlebars');
 
-
 //static folser configuration
-app.use(express.static(path.join(__dirname + '/public')));
+app.use(express.static(path.join(__dirname, 'public')));
 
 //Adding Session
 app.use(cookieParser());
@@ -63,6 +67,7 @@ app.use((req, res, next) => {
 // Use Routes
 app.use('/', index);
 app.use('/auth', auth);
+app.use('/stories', stories)
 
 //Listening Port
 const port = process.env.PORT || 5000;
